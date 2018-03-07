@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "办事大厅",
+    "navigationBarTextStyle": "black"
+  },
+  "subPackages": [
+    {
+      "root": "packagePages",
+      "pages": [
+        "pages/pgx/pgx"
+      ]
+    }
+  ]
+}

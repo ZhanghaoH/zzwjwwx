@@ -1,0 +1,14 @@
+/**app.wxss**/
+page {
+  background-color: #f7f7fa;
+  font-size: 28rpx;
+}
+.list-inline {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+image {
+  width: 100%;
+}

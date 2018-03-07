@@ -1,0 +1,86 @@
+<!--index.wxml-->
+<view class='city-wr'>
+  <!--天气浮窗  -->
+  <view class='weather-wr'>
+    <image mode='widthFix' class='img-weather' src='../../resources/weatherImgs/{{picUrl}}'></image>
+    <view style='margin-left: 20rpx'>
+      <view>{{weather}}</view>
+      <view>{{temperature}}</view>
+    </view>
+  </view>
+  <!-- 地址浮窗 -->
+  <view class='addr-wr' bindtap='isChangeCity'>
+    <view style='font-size: 40rpx'>{{addr}}</view>
+    <view>{{citypinyin}}</view>
+  </view>
+  <view wx:if="{{showCityList}}" class='list-inline list-area'>
+    <view wx:for="{{cityList}}" class='list-city-li' bindtap='changeCity' data-index='{{index}}'>{{item}} </view>
+  </view>
+  <image mode='widthFix' src='../../resources/cityImgs/{{citybg}}'></image>
+</view>
+<view class='hd'>热门服务</view>
+<view class='list-inline list-service'>
+  <view class='item-wr'>
+    <navigator url="../../redirect/redirect/redirect?title=redirect" open-type="redirect" hover-class="other-navigator-hover">
+    <image mode='widthFix' class='item-icon' src='../../resources/index_wfcx.png'></image>
+    <view class='item-txt'>机动车<view></view>违法查询</view>
+    </navigator>
+  </view>
+  <view class='item-wr'>
+    <navigator url="../../redirect/redirect/redirect?title=redirect" open-type="redirect" hover-class="other-navigator-hover">
+    <image mode='widthFix' class='item-icon' src='../../resources/index_crjbl.png'></image>
+    <view class='item-txt'>出入境办理<view></view>进度查询</view>
+    </navigator>
+  </view>
+  <view class='item-wr'>
+    <navigator url="../../redirect/redirect/redirect?title=redirect" open-type="redirect" hover-class="other-navigator-hover">
+    <image mode='widthFix' class='item-icon' src='../../resources/index_sfzbl.png'></image>
+    <view class='item-txt'>身份证办理<view></view>进度查询</view>
+    </navigator>
+  </view>
+  <view class='item-wr'>
+    <navigator url="../../redirect/redirect/redirect?title=redirect" open-type="redirect" hover-class="other-navigator-hover">
+    <image mode='widthFix' class='item-icon' src='../../resources/index_hzzn.png'></image>
+    <view class='item-txt'>户政<view></view>业务指南</view>
+    </navigator>
+  </view>
+</view>
+<view class='hd'>其他服务</view>
+<view  class='list-inline list-service'>
+  <view class='item-wr'>
+    <navigator url="../../redirect/redirect/redirect?title=redirect" open-type="redirect" hover-class="other-navigator-hover">
+    <image mode='widthFix' class='item-icon' src='../../resources/index_cmcx.png'></image>
+    <view class='item-txt'>同名查询</view>
+    </navigator>
+  </view>
+  <view class='item-wr'>
+    <navigator url="../../redirect/redirect/redirect?title=redirect" open-type="redirect" hover-class="other-navigator-hover">
+    <image mode='widthFix' class='item-icon' src='../../resources/index_crjzj.png'></image>
+    <view class='item-txt'>出入境<view></view>证件查询</view>
+    </navigator>
+  </view>
+  <view class='item-wr'>
+    <navigator url="../../redirect/redirect/redirect?title=redirect" open-type="redirect" hover-class="other-navigator-hover">
+    <image mode='widthFix' class='item-icon' src='../../resources/index_jszjf.png'></image>
+    <view class='item-txt'>驾驶证<view></view>计分查询</view>
+    </navigator>
+  </view>
+  <view class='item-wr'>
+    <navigator url="../../packagePages/pages/pgx/pgx" open-type="navigate" hover-class="other-navigator-hover">
+    <image mode='widthFix' class='item-icon' src='../../resources/index_ccba.png'></image>
+    <view class='item-txt'>乘车备案</view>
+    </navigator>
+  </view>
+  <view class='item-wr'>
+    <navigator url="../../packagePages/pages/pgx/pgx" open-type="navigate" hover-class="other-navigator-hover">
+    <image mode='widthFix' class='item-icon' src='../../resources/index_lkdt.png'></image>
+    <view class='item-txt'>路况地图</view>
+    </navigator>
+  </view>
+  <view class='item-wr'>
+    <navigator url="../../packagePages/pages/pgx/pgx" open-type="navigate" hover-class="other-navigator-hover">
+    <image mode='widthFix' class='item-icon' src='../../resources/index_ncfw.png'></image>
+    <view class='item-txt'>挪车服务</view>
+    </navigator>
+  </view>
+</view>

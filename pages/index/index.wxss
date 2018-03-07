@@ -1,0 +1,79 @@
+/**index.wxss**/
+
+.list-city-li {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 10rpx 0;
+  text-align: center;
+}
+.list-area {
+  position: absolute;
+  left: 0;
+  background-color: #4cb0ff;
+  z-index: 3;
+}
+.city-wr {
+  width: 100%;
+  position: relative;
+  color: #fff;
+}
+
+.weather-wr {
+  padding: 20rpx;
+  position: absolute;
+  top: 50rpx;
+  left: 50rpx;
+  background-color: rgba(144, 144, 144, 0.4);
+  display: flex;
+  align-items: center;
+}
+
+.addr-wr {
+  padding: 10rpx 30rpx;
+  position: absolute;
+  top: 50rpx;
+  right: 50rpx;
+  text-align: center;
+  background-color: rgba(144, 144, 144, 0.4);
+}
+
+.img-weather {
+  width: 100rpx;
+}
+.hd {
+  font-size: 32rpx;
+  line-height: 90rpx;
+  color: #4c4c4c;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.list-service {
+  background-color: #fff;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.item-wr{
+  width: 25%;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+navigator {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.item-icon {
+  width: 90rpx;
+}
+.item-txt {
+  margin-top: 17rpx;
+  height: 80rpx;
+  text-align: center;
+}
