@@ -16,7 +16,7 @@ Page({
   },
   onLoad: function () {
     let _this = this
-    if (!wx.getStorage('addr') || !wx.getStorage('addr') || !wx.getStorage('addr') || !wx.getStorage('addr') || !wx.getStorage('addr')) {
+    if (!wx.getStorageSync('addr') || !wx.getStorageSync('citybg') || !wx.getStorageSync('weather') || !wx.getStorageSync('temperature') || !wx.getStorageSync('picUrl')) {
       _this.getCity()
     }
   },
@@ -130,7 +130,7 @@ Page({
     })
     wx.setStorageSync('addr', city)
     wx.setStorageSync('citybg', imgArr[index])
-    wx.setStorageSync('citypinyin', citypin)
+    wx.setStorageSync('citypinyin', citypinyin)
   },
 
   // 天气的获取与设置
