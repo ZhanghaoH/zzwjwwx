@@ -1,0 +1,15 @@
+<!--pages/jszjf/jszjf.wxml-->
+<view class="form-wr">
+<form bindsubmit="check">
+  <view class="form-stadium">
+    <input placeholder="请输入驾驶证号" name="idcard" type="idcard" maxlength="30" placeholder-class="txt-tip"/>
+  </view>
+  <view class="form-stadium">
+    <input placeholder="请输入档案编号" name="cardnum" type="text" maxlength="30" placeholder-class="txt-tip"/>
+  </view>
+  <view>
+    <button form-type="submit" class="form-stadium btn-block">立即查询</button>
+  </view>
+</form>
+</view>
+<image src="../../resources/cx_bg2.png" class="cx-bg"></image>

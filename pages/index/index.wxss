@@ -76,4 +76,5 @@ navigator {
   margin-top: 17rpx;
   height: 80rpx;
   text-align: center;
+  color: #000;
 }

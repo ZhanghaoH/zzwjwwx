@@ -3,15 +3,22 @@
     "pages/index/index"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "办事大厅",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "subPackages": [
     {
       "root": "packagePages",
       "pages": [
+        "pages/wfcx/wfcx",
+        "pages/crjbl/crjbl",
+        "pages/sfzbl/sfzbl",
+        "pages/hzywzn/hzywzn",
+        "pages/cmcx/cmcx",
+        "pages/crjzj/crjzj",
+        "pages/jszjf/jszjf",
         "pages/pgx/pgx"
       ]
     }

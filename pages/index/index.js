@@ -118,9 +118,10 @@ Page({
   setInterface: function (city) {
     let _this = this
     const cityArr = ["郑州", "开封", "洛阳", "平顶山", "安阳", "鹤壁", "新乡", "焦作", "濮阳", "许昌", "漯河", "三门峡", "商丘", "周口", "驻马店", "南阳", "信阳", "济源", "巩义", "兰考县", "汝州", "滑县", "长垣县", "邓州", "永城", "固始县", "鹿邑县", "新蔡县"]
+    const cityPinyinArr = [{ city: "郑州", pinyin: "ZhengZhou" }, { city: "开封", pinyin: "KaiFeng" }, { city: "洛阳", pinyin: "LuoYang" }, { city: "平顶山", pinyin: "PingDingShan" }, { city: "安阳", pinyin: "AnYang" }, { city: "鹤壁", pinyin: "HeBi" }, { city: "新乡", pinyin: "XinXiang" }, { city: "焦作", pinyin: "JiaoZuo" }, { city: "濮阳", pinyin: "PuYang" }, { city: "许昌", pinyin: "XuChang" }, { city: "漯河", pinyin: "LuoHe" }, { city: "三门峡", pinyin: "SanMenXia" }, { city: "商丘", pinyin: "ShangQiu" }, { city: "周口", pinyin: "ZhouKou" }, { city: "驻马店", pinyin: "ZhuMaDian" }, { city: "南阳", pinyin: "NanYang" }, { city: "信阳", pinyin: "XinYang" }, { city: "济源", pinyin: "JiYuan" }, { city: "巩义", pinyin: "GongYi" }, { city: "兰考县", pinyin: "LanKao" }, { city: "汝州", pinyin: "RuZhou" }, { city: "滑县", pinyin: "HuaXian" }, { city: "长垣县", pinyin: "ChangYuan" }, { city: "邓州", pinyin: "DengZhou" }, { city: "永城", pinyin: "YongCheng" }, { city: "固始县", pinyin: "GuShi" }, { city: "鹿邑县", pinyin: "LuYi" }, { city: "新蔡县", pinyin: "XinCai"}]
     const imgArr = ['img_a-min.jpg', 'img_b-min.jpg', 'img_c-min.jpg', 'img_d-min.jpg', 'img_e-min.jpg', 'img_f-min.jpg', 'img_g-min.jpg', 'img_h-min.jpg', 'img_i-min.jpg', 'img_j-min.jpg', 'img_k-min.jpg', 'img_l-min.jpg', 'img_m-min.jpg', 'img_n-min.jpg', 'img_o-min.jpg', 'img_p-min.jpg', 'img_q-min.jpg', 'img_r-min.jpg', 'img_a-min.jpg', 'img_b-min.jpg', 'img_d-min.jpg', 'img_e-min.jpg', 'img_g-min.jpg', 'img_p-min.jpg', 'img_m-min.jpg', 'img_r-min.jpg', 'img_n-min.jpg', 'img_p-min.jpg',]
     let index = cityArr.indexOf(city)
-    let citypinyin = pinyinUtil.convert().getPinyin(city).replace(/\s+/, '')
+    let citypinyin = cityPinyinArr[index].pinyin
     app.globalData.city = city;
     _this.setWeather(city)
     _this.setData({
@@ -184,5 +185,24 @@ Page({
       },
       complete: function (res) { },
     })
+  },
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '微警务办事大厅',
+      path: '/pages/index/index',
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
   }
 })

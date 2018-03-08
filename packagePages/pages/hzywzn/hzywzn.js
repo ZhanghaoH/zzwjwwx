@@ -1,0 +1,100 @@
+// pages/hzywzn/hzywzn.js
+const app = getApp()
+const util = require('../../../utils/util.js')
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  check: function (e) {
+    let values = e.detail.value
+    console.log(values)
+    let idcard = values.idcard
+    idcard = idcard.replace(/\s/, '')
+    let cardnum = values.cardnum
+    cardnum = cardnum.replace(/\s/, '')
+    let REGID = new RegExp(
+      "^((1[1-5])|(2[1-3])|(3[1-7])|(4[1-6])|(5[0-4])|(6[1-5])|71|(8[12])|91)\\d{4}(((19|20)\\d{2}(0[13-9]|1[012])(0[1-9]|[12]\\d|30))|((19|20)\\d{2}(0[13578]|1[02])31)|((19|20)\\d{2}02(0[1-9]|1\\d|2[0-8]))|((19|20)([13579][26]|[2468][048]|0[048])0229))\\d{3}(\\d|X|x)?$"
+    )
+    let isidCard = REGID.exec(idcard);
+    console.log(!isidCard)
+    if (isidCard == null || cardnum == '') {
+      wx.showModal({
+        title: '提示',
+        content: '请输入正确的身份证号或证件号',
+        showCancel: false
+      })
+    } else {
+      let info = {
+        "idNo": idcard,
+        "cardNo": cardnum
+      };
+      let auth = {
+        "time_stamp": util.timestamp(new Date())
+      };
+      wx.request({
+        url: app.globalData.URLHEAD + app.globalData.CRJZJ,
+        data: {
+          info: JSON.stringify(info),
+          auth: JSON.stringify(auth)
+        },
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        method: 'POST',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) {
+          console.log(res.data)
+        },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    }
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '微警务办事大厅',
+      path: '/pages/index/index',
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
+  }
+})

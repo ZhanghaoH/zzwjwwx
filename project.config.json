@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.91",
 	"appid": "wxfc4d137b56db6ad9",
-	"projectname": "%E5%8A%9E%E4%BA%8B%E5%A4%A7%E5%8E%85",
+	"projectname": "%E5%BE%AE%E8%AD%A6%E5%8A%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -27,7 +27,32 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": 0,
+					"name": "出入境证件查询",
+					"pathName": "packagePages/pages/crjzj/crjzj",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "出入境办理进度查询",
+					"pathName": "packagePages/pages/crjbl/crjbl",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "身份证办理进度查询",
+					"pathName": "packagePages/pages/sfzbl/sfzbl",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "驾驶证计分查询",
+					"pathName": "packagePages/pages/jszjf/jszjf",
+					"query": ""
+				}
+			]
 		}
 	}
 }

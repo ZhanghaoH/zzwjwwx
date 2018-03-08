@@ -1,7 +1,11 @@
 /**app.wxss**/
 page {
   background-color: #f7f7fa;
+  color: #4c4c4c;
   font-size: 28rpx;
+  min-height: 100%;
+  position: relative;
+  letter-spacing: 1rpx;
 }
 .list-inline {
   display: flex;
@@ -11,4 +15,65 @@ page {
 }
 image {
   width: 100%;
+}
+.form-wr {
+  padding-top: 50rpx;
+}
+.form-stadium {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  /* height: 90rpx;
+  line-height: 90rpx; */
+  /* color: #808080; */
+  border-radius: 90rpx;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+  border: 1rpx solid #e5e5e5;
+}
+.form-stadium input {
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #808080;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  border-radius: 90rpx;
+}
+
+.icon-circle {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.txt-tip {
+  color: #b2b2b2;
+  letter-spacing: 2rpx;
+}
+.cx-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.btn-block {
+  background-color: #1287e2;
+  color: #fff;
+  border: none;
+  font-size: 30rpx;
+  margin-top: 50rpx;
+  line-height: 90rpx;
+}
+.tips-wr {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 30rpx;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+.tips-bd {
+  color: #808080
 }
