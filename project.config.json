@@ -51,6 +51,18 @@
 					"name": "驾驶证计分查询",
 					"pathName": "packagePages/pages/jszjf/jszjf",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "户政业务指南",
+					"pathName": "packagePages/pages/hzywzn/hzywzn",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "户政业务详情",
+					"pathName": "packagePages/pages/ywxq/ywxq",
+					"query": "guid=ebf3800c-b978-41e3-9343-55cf26828653&title=迁往市（县）外（有准迁证）"
 				}
 			]
 		}

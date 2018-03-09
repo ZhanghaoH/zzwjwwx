@@ -1,2 +1,11 @@
 <!--pages/hzywzn/hzywzn.wxml-->
-<text>pages/hzywzn/hzywzn.wxml</text>
+<view class="container">
+  <block wx:for="{{arrHz}}" wx:key="caseNo">
+    <view class="item">
+      <navigator class="item-nav" url="../ywxq/ywxq?guid={{item.guid}}&title={{item.caseName}}" hover-class='none' class='item-link'>
+      <view class='link-name'>{{item.caseName}}</view>
+      <view class='link-order'>{{index + 1}}</view>
+      </navigator>
+    </view>
+  </block>
+</view>

@@ -46,7 +46,6 @@ Page({
         dataType: 'json',
         success: function (res) {
           console.log(res)
-          console.log(res.data.status)
           if (res.data.status == 0) {
             let addressComponent = res.data.result.addressComponent
             _this.confirmCity(addressComponent)

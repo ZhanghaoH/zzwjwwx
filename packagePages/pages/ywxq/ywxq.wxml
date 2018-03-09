@@ -1,0 +1,32 @@
+<!--pages/ywxq/hwxq.wxml-->
+<view class="container">
+  <view class="item-wr">
+    <view class="item__mark">
+      <view class="item-cnt">事项性质：{{caseProperty}}</view>
+      <view class="item-cnt">法定周期：{{detail.legalPromiseDays}}个工作日</view>
+    </view>
+    <view class="item__mark"  style='margin-top: 30rpx'>
+      <view class="item-cnt">办件类型：{{caseType}}</view>
+      <view class="item-cnt">承诺周期：{{detail.promiseDays}}个工作日</view>
+      <!-- <view><text class="item__label">收费信息：</text>{{detail.isPay == "0" ? "否" : "是"}}</view> -->
+    </view>
+  </view>
+  <view>
+    <view class="item__label">办事指南</view>
+    <view class="classname">
+      <view>{{detail.theirGuide}}</view>
+    </view>
+  </view>
+  <view>
+    <view class="item__label">审批（办事）依据</view>
+    <block wx:for="{{basisList}}" wx:key="{{guid}}">
+      <view> {{index + 1}}.{{item.basisName}}</view>
+    </block>
+  </view>
+  <view>
+    <view class="item__label">申请材料</view>
+    <block wx:for="{{materialList}}" wx:key="{{guid}}">
+      <view> {{index + 1}}.{{item.material}}</view>
+    </block>
+  </view>
+</view>

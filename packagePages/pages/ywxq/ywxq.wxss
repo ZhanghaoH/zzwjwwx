@@ -1,0 +1,29 @@
+/* pages/ywxq/hwxq.wxss */
+.container {
+  padding: 30rpx;
+}
+.item-wr {
+  background-color: #1287e2;
+  border-radius: 10rpx;
+  padding: 30rpx;
+}
+.item__mark {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  /* padding-left: 30rpx;
+  padding-right: 30rpx; */
+  color: #fff;
+}
+.item-cnt {
+  width: 50%;
+}
+.item__label {
+  border-left: 6rpx solid #1287e2;
+  color: #000;
+  font-size: 36rpx;
+  padding-left: 20rpx;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
