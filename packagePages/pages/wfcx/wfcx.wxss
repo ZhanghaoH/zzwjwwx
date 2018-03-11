@@ -1,1 +1,44 @@
 /* pages/wfcx/wfcx.wxss */
+.car-type-wr {
+  padding: 0 30rpx 60rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.car-type {
+  width: 110rpx;
+  height: 110rpx;
+  border: 1rpx solid #e5e5e5;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 26rpx;
+  box-shadow: 5rpx 5rpx 10rpx #e5e5e5;
+}
+.icon-type {
+  width: 80rpx;
+}
+.picker {
+  /* width: 100rpx; */
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.form-groups {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.form-groups input {
+  flex: auto;
+}
+.txt-picker {
+  margin-right: 20rpx;
+}

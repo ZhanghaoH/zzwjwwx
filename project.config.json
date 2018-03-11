@@ -63,6 +63,12 @@
 					"name": "户政业务详情",
 					"pathName": "packagePages/pages/ywxq/ywxq",
 					"query": "guid=ebf3800c-b978-41e3-9343-55cf26828653&title=迁往市（县）外（有准迁证）"
+				},
+				{
+					"id": -1,
+					"name": "机动车违法查询",
+					"pathName": "packagePages/pages/wfcx/wfcx",
+					"query": ""
 				}
 			]
 		}

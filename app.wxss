@@ -77,3 +77,6 @@ image {
 .tips-bd {
   color: #808080
 }
+.icon-picker {
+  width: 30rpx;
+}

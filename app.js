@@ -44,6 +44,7 @@ App({
   },
   globalData: {
     city: '郑州',
+    cityIndex: 0,
     ak: 'Cw3ljjC03lMcgV3RIfZUi403BRR4mYbe',
     // 通用接口头
     URLHEAD: 'http://app2.henanga.gov.cn/jmth5/zzga/',

@@ -7,14 +7,35 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    arrCity: [
+      "豫A",
+      "豫B",
+      "豫C",
+      "豫D",
+      "豫E",
+      "豫F",
+      "豫G",
+      "豫H",
+      "豫I",
+      "豫J",
+      "豫K",
+      "豫L",
+      "豫M",
+      "豫N",
+      "豫O",
+      "豫P",
+      "豫Q",
+      "豫R",
+    ],
+    cityIndex: app.globalData.cityIndex,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(app.globalData.city)
+    console.log(app.globalData.cityIndex)
   },
 
   /**

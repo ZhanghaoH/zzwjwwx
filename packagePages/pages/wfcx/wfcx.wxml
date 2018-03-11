@@ -1,15 +1,35 @@
 <!--pages/wfcx/wfcx.wxml-->
 <view class="form-wr">
-<form bindsubmit="check">
-  <view class="form-stadium">
-    <input placeholder="请输入车牌号" name="carNum" type="text" maxlength="30" placeholder-class="txt-tip" />
-  </view>
-  <view class="form-stadium">
-    <input placeholder="请输入车辆识别代码" name="cardnum" type="text" maxlength="30" placeholder-class="txt-tip"/>
-  </view>
-  <view>
-    <button form-type="submit" class="form-stadium btn-block">立即查询</button>
-  </view>
-</form>
+  <form bindsubmit="check">
+    <view class='car-type-wr'>
+      <view class="car-type" id='car' data-type='02'>
+        <image mode='widthFix' class='icon-type' src="../../resources/car.png"></image>
+        <view>小车</view>
+      </view>
+      <view class="car-type" id='truck' data-type='01'>
+        <image mode='widthFix' class='icon-type' src="../../resources/truck.png"></image>
+        <view>大车</view>
+      </view>
+      <view class="car-type" id='carev' data-type='52'>
+        <image mode='widthFix' class='icon-type' src="../../resources/carev.png"></image>
+        <view>新能源</view>
+      </view>
+    </view>
+    <view class="form-stadium form-groups">
+      <picker class='picker' bindchange="cityChange" value="{{cityIndex}}" range="{{arrCity}}">
+        <view>
+          <text class="txt-picker">{{arrCity[cityIndex]}}</text>
+        <image class='icon-picker' mode="widthFix" src='../../resources/picker.png'></image>
+        </view>
+      </picker>
+      <input placeholder="请输入车牌号" name="carNum" type="text" maxlength="30" placeholder-class="txt-tip" />
+    </view>
+    <view class="form-stadium">
+      <input placeholder="请输入车辆识别代码" name="cardnum" type="text" maxlength="30" placeholder-class="txt-tip" />
+    </view>
+    <view>
+      <button form-type="submit" class="form-stadium btn-block">立即查询</button>
+    </view>
+  </form>
 </view>
 <image src="../../resources/cx_bg2.png" class="cx-bg"></image>
