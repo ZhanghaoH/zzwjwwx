@@ -1,0 +1,20 @@
+<!--pages/res_crjzj/res_crjzj.wxml-->
+  <view class="res-wr">
+    <view class="res-tit">{{res_crjzj.ZJZL}}</view>
+    <view class="res-cnt">
+      <view class="res-row">
+        <view class="res-item">
+          <image class="res-icon" mode='widthFix' src='../../resources/name.png'></image>
+          <text>{{res_crjzj.ZWXM}}</text>
+        </view>
+        <view class="res-item">
+          <image class="res-icon" mode='widthFix' src='../../resources/zjhm.png'></image>
+          <text>{{res_crjzj.ZJHM}}</text>
+        </view>
+      </view>
+      <view class="res-row">
+          <image class="res-icon" mode='widthFix' src='../../resources/yxqx.png'></image>
+          <text>有效期限  {{res_crjzj.QFRQ}} —— {{res_crjzj.YXQZ}}</text>
+      </view>
+    </view>
+  </view>

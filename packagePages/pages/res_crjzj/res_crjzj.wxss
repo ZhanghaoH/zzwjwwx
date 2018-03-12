@@ -1,0 +1,46 @@
+/* pages/res_crjzj/res_crjzj.wxss */
+.res-tit {
+  background-color: #1287e2;
+  height: 64rpx;
+  line-height: 64rpx;
+  color: #fff;
+  padding-left: 30rpx;
+  padding-right: 75rpx;
+  border-top-left-radius: 15rpx;
+  border-bottom-right-radius: 64rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.res-wr {
+  margin-top: 60rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  border-radius: 15rpx;
+  border: 1rpx solid #e5e5e5;
+  box-shadow: 4rpx 4rpx 8rpx #e5e5e5;
+  background-color: #fff;
+  color: #4c4c4c;
+  font-size: 26rpx;
+  position: relative;
+  padding-top: 64rpx;
+}
+.res-icon {
+  width: 40rpx;
+  margin-right: 20rpx;
+}
+.res-row {
+  display: flex;
+  padding: 0 50rpx;
+  line-height: 1.5;
+  margin-top: 30rpx;
+  align-items: center;
+}
+.res-row:last-child {
+  margin-bottom: 30rpx;
+}
+.res-item {
+  min-width: 200rpx;
+  display: flex;
+  align-items: center;
+}

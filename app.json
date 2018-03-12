@@ -20,7 +20,12 @@
         "pages/crjzj/crjzj",
         "pages/jszjf/jszjf",
         "pages/ywxq/ywxq",
-        "pages/pgx/pgx"
+        "pages/pgx/pgx",
+        "pages/res_crjzj/res_crjzj",
+        "pages/res_crjbl/res_crjbl",
+        "pages/res_sfzbl/res_sfzbl",
+        "pages/res_jszjf/res_jszjf",
+        "pages/res_wf/res_wf"
       ]
     }
   ]
