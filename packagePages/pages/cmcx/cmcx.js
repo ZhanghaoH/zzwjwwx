@@ -7,14 +7,69 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    cityIndex: 0,
+    countryIndex: 0,
+    arrCity: [{ orgName: "不限", orgId: "0"}],
+    arrCountry: [{ orgName: "不限", orgId: "0" }],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let _this = this
+    let auth = {
+      "time_stamp": util.timestamp(new Date())
+    };
+    wx.request({
+      url: app.globalData.URLHEAD + app.globalData.CMCX_CITY,
+      data: {
+        auth: JSON.stringify(auth)
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'POST',
+      dataType: 'json',
+      responseType: 'text',
+      success: function (res) {
+        console.log(res.data)
+        let data = res.data
+        let errCode = data.errCode;
+        switch (errCode) {
+          case '0':
+            // TODO: result
+            let arrCity = _this.data.arrCity.concat(data.resultData)
+            console.log(arrCity)
+            _this.setData({
+              arrCity: arrCity
+            })
+            break;
+          case '1':
+          case '10':
+            wx.showModal({
+              title: '提示',
+              content: data.msg,
+              showCancel: false,
+            })
+            break;
+          case '12':
+            wx.showModal({
+              title: '提示',
+              content: '连接出问题了，请稍后再试',
+              showCancel: false,
+            })
+            break;
+        }
+      },
+      fail: function (res) {
+        wx.showModal({
+          title: '提示',
+          content: '连接出问题了，请稍后再试',
+          showCancel: false,
+        })
+      },
+    })
   },
 
   /**
@@ -30,35 +85,28 @@ Page({
   onShow: function () {
 
   },
-
-  check: function (e) {
-    let values = e.detail.value
-    console.log(values)
-    let idcard = values.idcard
-    idcard = idcard.replace(/\s/, '')
-    let cardnum = values.cardnum
-    cardnum = cardnum.replace(/\s/, '')
-    let REGID = new RegExp(
-      "^((1[1-5])|(2[1-3])|(3[1-7])|(4[1-6])|(5[0-4])|(6[1-5])|71|(8[12])|91)\\d{4}(((19|20)\\d{2}(0[13-9]|1[012])(0[1-9]|[12]\\d|30))|((19|20)\\d{2}(0[13578]|1[02])31)|((19|20)\\d{2}02(0[1-9]|1\\d|2[0-8]))|((19|20)([13579][26]|[2468][048]|0[048])0229))\\d{3}(\\d|X|x)?$"
-    )
-    let isidCard = REGID.exec(idcard);
-    console.log(!isidCard)
-    if (isidCard == null || cardnum == '') {
-      wx.showModal({
-        title: '提示',
-        content: '请输入正确的身份证号或证件号',
-        showCancel: false
+  cityChange: function(e){
+    console.log(e.detail.value)
+    let cityIndex = e.detail.value
+    let _this = this
+    this.setData({
+      cityIndex: e.detail.value,
+      countryIndex: 0,
+    })
+    if( cityIndex == 0){
+      this.setData({
+        arrCountry: [{ orgName: "不限", orgId: "0"}],
       })
     } else {
+      let city = _this.data.arrCity[cityIndex].orgId
       let info = {
-        "idNo": idcard,
-        "cardNo": cardnum
+        "cityId": city
       };
       let auth = {
         "time_stamp": util.timestamp(new Date())
       };
       wx.request({
-        url: app.globalData.URLHEAD + app.globalData.CRJZJ,
+        url: app.globalData.URLHEAD + app.globalData.CMCX_POLICE,
         data: {
           info: JSON.stringify(info),
           auth: JSON.stringify(auth)
@@ -71,8 +119,122 @@ Page({
         responseType: 'text',
         success: function (res) {
           console.log(res.data)
+          let data = res.data
+          let errCode = data.errCode;
+          switch (errCode) {
+            case '0':
+              // TODO: result
+              data.resultData.unshift(_this.data.arrCity[cityIndex])
+              let arrCountry = data.resultData
+              console.log(arrCountry)
+              _this.setData({
+                arrCountry: arrCountry
+              })
+              break;
+            case '1':
+            case '10':
+              wx.showModal({
+                title: '提示',
+                content: data.msg,
+                showCancel: false,
+              })
+              break;
+            case '12':
+              wx.showModal({
+                title: '提示',
+                content: '连接出问题了，请稍后再试',
+                showCancel: false,
+              })
+              break;
+          }
         },
-        fail: function (res) { },
+        fail: function (res) {
+          wx.showModal({
+            title: '提示',
+            content: '连接出问题了，请稍后再试',
+            showCancel: false,
+          })
+        },
+      })
+    }
+  },
+  countryChange: function(e){
+    console.log(e.detail.value)
+    let CountryIndex = e.detail.value
+    this.setData({
+      countryIndex: e.detail.value
+    })
+  },
+  check: function (e) {
+    let values = e.detail.value
+    console.log(values)
+    let name = values.name
+    name = name.replace(/\s/g, '')
+    if (name == '') {
+      wx.showModal({
+        title: '提示',
+        content: '请输入要查询的姓名',
+        showCancel: false
+      })
+    } else {
+      let cityIndex = this.data.cityIndex
+      let deptId = cityIndex == 0 ? "410000" : this.data.arrCountry[this.data.countryIndex].orgId
+      console.log(deptId)
+      let info = {
+        "deptId": deptId,
+        "name": name
+      };
+      let auth = {
+        "time_stamp": util.timestamp(new Date())
+      };
+      wx.request({
+        url: app.globalData.URLHEAD + app.globalData.CMCX,
+        data: {
+          info: JSON.stringify(info),
+          auth: JSON.stringify(auth)
+        },
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        method: 'POST',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) {
+          console.log(res.data)
+          let data = res.data
+          let errCode = data.errCode;
+          switch (errCode) {
+            case '0':
+              wx.showModal({
+                title: '提示',
+                content: '与你重名的有'+ data.resultData  + '人',
+                showCancel: false,
+              })
+              break;
+            case '1':
+            case '10':
+              wx.showModal({
+                title: '提示',
+                content: data.msg,
+                showCancel: false,
+              })
+              break;
+            case '12':
+              wx.showModal({
+                title: '提示',
+                content: '连接出问题了，请稍后再试',
+                showCancel: false,
+              })
+              break;
+          }
+        },
+        fail: function (res) { 
+          wx.showModal({
+            title: '提示',
+            content: '连接出问题了，请稍后再试',
+            showCancel: false,
+          })
+         },
         complete: function (res) { },
       })
     }

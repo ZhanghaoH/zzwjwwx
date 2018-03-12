@@ -1,1 +1,45 @@
 /* pages/cmcx/cmcx.wxss */
+
+.picker {
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 90rpx;
+  background-color: #fff;
+  border: 1rpx solid #e5e5e5;
+  flex: auto;
+  /* display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center; */
+}
+
+.form-groups {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  margin-bottom: 30rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.stadium-wr {
+  margin-right: 30rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  border-radius: 90rpx;
+  background-color: #fff;
+  border: 1rpx solid #e5e5e5;
+}
+.wr-picker {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 90rpx;
+}
+.txt-picker {
+  flex: auto;
+}

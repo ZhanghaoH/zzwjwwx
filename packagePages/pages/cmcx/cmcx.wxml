@@ -1,2 +1,31 @@
 <!--pages/cmcx/cmcx.wxml-->
-<text>pages/cmcx/cmcx.wxml</text>
+<!--pages/wfcx/wfcx.wxml-->
+<view class="form-wr">
+  <form bindsubmit="check">
+    <view class="form-stadium">
+      <input placeholder="请输入要查询的姓名" name="name" type="text" maxlength="30" placeholder-class="txt-tip" />
+    </view>
+    <view class="form-groups">
+      <view class='stadium-wr'>河南全省</view>
+
+      <picker class="picker" bindchange="cityChange" value="{{cityIndex}}" range="{{arrCity}}" range-key="orgName">
+         <view class='wr-picker'> 
+          <view class="txt-picker">{{arrCity[cityIndex].orgName}}</view>
+          <image class="icon-picker" mode="widthFix" src="../../resources/picker.png"></image>
+         </view> 
+      </picker>
+    </view>
+    <view class="form-groups">
+      <picker class='picker' value="{{countryIndex}}" range="{{arrCountry}}" bindchange="countryChange" range-key="orgName">
+         <view class="wr-picker"> 
+          <view class="txt-picker">{{arrCountry[countryIndex].orgName}}</view>
+          <image class="icon-picker" mode="widthFix" src="../../resources/picker.png"></image>
+         </view> 
+      </picker>
+    </view>
+    <view>
+      <button form-type="submit" class="form-stadium btn-block">立即查询</button>
+    </view>
+  </form>
+</view>
+<image src="../../resources/cx_bg2.png" class="cx-bg"></image>

@@ -47,8 +47,8 @@ App({
     cityIndex: 0,
     ak: 'Cw3ljjC03lMcgV3RIfZUi403BRR4mYbe',
     // 通用接口头
-    URLHEAD: 'http://app2.henanga.gov.cn/jmth5/zzga/',
-    // URLHEAD : 'https://app1.henanga.gov.cn/jmth5/zzga/',
+    // URLHEAD: 'http://app2.henanga.gov.cn/jmth5/zzga/',
+    URLHEAD : 'https://app1.henanga.gov.cn/jmth5/zzga/',
     // 业务接口
     JZZ: 'getResidenceProgress',
     SFZ: 'getIdCardProgress',

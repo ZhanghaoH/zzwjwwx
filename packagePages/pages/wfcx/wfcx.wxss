@@ -20,6 +20,15 @@
   font-size: 26rpx;
   box-shadow: 5rpx 5rpx 10rpx #e5e5e5;
 }
+.car-type.car {
+  color: #1287e2;
+}
+.car-type.truck {
+  color: #f3b100;
+}
+.car-type.carev {
+  color: #61d33a;
+}
 .icon-type {
   width: 80rpx;
 }

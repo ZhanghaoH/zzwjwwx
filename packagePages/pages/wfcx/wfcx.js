@@ -28,6 +28,37 @@ Page({
       "豫R",
     ],
     cityIndex: app.globalData.cityIndex,
+    HPZL: '02',
+    car: {
+      color: '#fff',
+      icon: 'car_active',
+      bgColor: '#1287e2',
+    },
+    truck: {
+      color: '#f3b100',
+      icon: 'truck',
+      bgColor: '#fff',
+    },
+    carev: {
+      color: '#61d33a',
+      icon: 'carev',
+      bgColor: '#fff',
+    },
+    car_active: {
+      color: '#1287e2',
+      icon: 'car',
+      bgColor: '#fff',
+    },
+    truck_active: {
+      color: '#f3b100',
+      icon: 'truck',
+      bgColor: '#fff',
+    },
+    carev_active: {
+      color: '#61d33a',
+      icon: 'carev',
+      bgColor: '#fff',
+    },
   },
 
   /**
@@ -51,35 +82,101 @@ Page({
   onShow: function () {
 
   },
+  getType: function(e){
+    let _this = this
+    let HPZL = e.currentTarget.dataset.type
+    console.log(HPZL)
+    _this.setData({
+      HPZL: HPZL,
+      car: {
+        color: '#1287e2',
+        icon: 'car',
+        bgColor: '#fff',
+      },
+      truck: {
+        color: '#f3b100',
+        icon: 'truck',
+        bgColor: '#fff',
+      },
+      carev: {
+        color: '#61d33a',
+        icon: 'carev',
+        bgColor: '#fff',
+      },
+    })
+    switch(HPZL){
+      case '02':
+        _this.setData({
+          car: {
+            color: '#fff',
+            icon: 'car_active',
+            bgColor: '#1287e2',
+          }
+        })
+        break;
+      case '01':
+        _this.setData({
+          truck: {
+            color: '#fff',
+            icon: 'truck_active',
+            bgColor: '#f3b100',
+          },
+        }) 
+        break;
+      case '52':
+        _this.setData({
+          carev: {
+            color: '#fff',
+            icon: 'carev_active',
+            bgColor: '#61d33a',
+          },
+        }) 
+        break;
+      default:
+        _this.setData({
+          car: {
+            color: '#fff',
+            icon: 'car_active',
+            bgColor: '#1287e2',
+          }
+        }) 
+    }
+    console.log(this.data.car)
+  },
 
+  cityChange: function(e){
+    console.log(e.detail.value)
+    this.setData({
+      cityIndex: e.detail.value
+    })
+  },
   check: function (e) {
+    let FZJG = this.data.arrCity[this.data.cityIndex]
+    let HPZL = this.data.HPZL
     let values = e.detail.value
     console.log(values)
-    let idcard = values.idcard
-    idcard = idcard.replace(/\s/, '')
-    let cardnum = values.cardnum
-    cardnum = cardnum.replace(/\s/, '')
-    let REGID = new RegExp(
-      "^((1[1-5])|(2[1-3])|(3[1-7])|(4[1-6])|(5[0-4])|(6[1-5])|71|(8[12])|91)\\d{4}(((19|20)\\d{2}(0[13-9]|1[012])(0[1-9]|[12]\\d|30))|((19|20)\\d{2}(0[13578]|1[02])31)|((19|20)\\d{2}02(0[1-9]|1\\d|2[0-8]))|((19|20)([13579][26]|[2468][048]|0[048])0229))\\d{3}(\\d|X|x)?$"
-    )
-    let isidCard = REGID.exec(idcard);
-    console.log(!isidCard)
-    if (isidCard == null || cardnum == '') {
+    let carNum = values.carNum
+    carNum = carNum.toUpperCase().replace(/\s+/g, '')
+    let vin = values.vin
+    vin = vin.replace(/\s+/g, '')
+    if (vin == "" || carNum == '') {
       wx.showModal({
         title: '提示',
-        content: '请输入正确的身份证号或证件号',
+        content: '请检查相关信息是否正确填写！',
         showCancel: false
       })
     } else {
       let info = {
-        "idNo": idcard,
-        "cardNo": cardnum
+        "HPHM": carNum,
+        "HPZL": HPZL,
+        "CLSBDH": vin,
+        "FZJG": FZJG
       };
       let auth = {
         "time_stamp": util.timestamp(new Date())
       };
       wx.request({
-        url: app.globalData.URLHEAD + app.globalData.CRJZJ,
+        url: app.globalData.URLHEAD + app.globalData.WFCX,
         data: {
           info: JSON.stringify(info),
           auth: JSON.stringify(auth)
@@ -92,9 +189,38 @@ Page({
         responseType: 'text',
         success: function (res) {
           console.log(res.data)
+          let data = res.data
+          let errCode = data.errCode;
+          switch (errCode) {
+            case 0:
+              // TODO: navigate to res page
+              break;
+            case '1':
+            case '2':
+            case '10':
+              wx.showModal({
+                title: '提示',
+                content: data.msg,
+                showCancel: false,
+              })
+              break;
+            case '12':
+              wx.showModal({
+                title: '提示',
+                content: '连接出问题了，请稍后再试',
+                showCancel: false,
+              })
+              break;
+          }
+
         },
-        fail: function (res) { },
-        complete: function (res) { },
+        fail: function (res) { 
+          wx.showModal({
+            title: '提示',
+            content: '连接出问题了，请稍后再试',
+            showCancel: false,
+          })
+        },
       })
     }
   },
