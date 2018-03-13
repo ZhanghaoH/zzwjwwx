@@ -12,7 +12,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let res_crjbl = wx.getStorageSync('res_crjbl')
+    this.setData({
+      res_crjbl: res_crjbl
+    })
   },
 
   /**

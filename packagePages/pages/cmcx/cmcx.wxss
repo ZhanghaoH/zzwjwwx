@@ -32,6 +32,7 @@
   background-color: #fff;
   border: 1rpx solid #e5e5e5;
 }
+
 .wr-picker {
   padding-left: 30rpx;
   padding-right: 30rpx;
@@ -40,6 +41,32 @@
   align-items: center;
   height: 90rpx;
 }
+
 .txt-picker {
   flex: auto;
+}
+
+.tips-info-wr {
+  position: relative;
+  height: 240rpx;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-mark {
+  width: 50rpx;
+}
+
+.tips-tl {
+  position: absolute;
+  top: 0;
+  left: 50rpx;
+}
+
+.tips-tr {
+  position: absolute;
+  top: 0;
+  right: 50rpx;
 }

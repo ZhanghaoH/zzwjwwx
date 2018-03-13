@@ -29,3 +29,13 @@
   </form>
 </view>
 <image src="../../resources/cx_bg2.png" class="cx-bg"></image>
+<view class="modal-wr" wx:if="{{showTip}}">
+  <view class="modal-cnt">
+  <view class="tips-info-wr">
+    <image mode='widthFix' src="../../resources/mark.png" class="icon-mark tips-tl"></image>
+    <image mode='widthFix' src="../../resources/mark.png" class="icon-mark tips-tr"></image>
+    <text>与您重名的有{{cmNum}}人</text>
+  </view>
+    <view class="modal-btn" bindtap="hideTip">确 定</view>
+  </view>
+</view>

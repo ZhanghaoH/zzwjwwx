@@ -1,1 +1,74 @@
 /* pages/res_wf/res_wf.wxss */
+
+.container {
+  padding: 90rpx 30rpx;
+}
+
+.wf-wr {
+  border-radius: 15rpx;
+  border: 1rpx solid #e5e5e5;
+  box-shadow: 4rpx 4rpx 8rpx #e5e5e5;
+  background-color: #fff;
+  margin-top: 90rpx;
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.wf-wr:first-child {
+  margin-top: 0rpx;
+}
+
+.wf-wr>view {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.wf-details {
+  flex: 2;
+  /* justify-content: space-around; */
+  line-height: 2.0;
+  align-items: flex-start;
+  background-color: #1287e2;
+  color: #fff;
+  padding: 20rpx;
+  border-radius: 15rpx;
+  position: relative;
+  top: -30rpx;
+}
+
+.wf-addr {
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  flex: 3;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.wf-status {
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detail-icon {
+  width: 30rpx;
+  margin-right: 20rpx;
+}
+.detail-item {
+  display: flex;
+  align-items: center;
+}
+.wf-clbj {
+  color: #fff;
+  background-color: #f15754;
+  line-height: 1.5;
+  font-size: 24rpx;
+  padding-left: 8rpx;
+  padding-right: 8rpx;
+  border-radius: 10rpx;
+}

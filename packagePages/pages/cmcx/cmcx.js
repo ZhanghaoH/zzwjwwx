@@ -165,7 +165,13 @@ Page({
       countryIndex: e.detail.value
     })
   },
+  hideTip: function () {
+    this.setData({
+      showTip: false
+    })
+  },
   check: function (e) {
+    let _this = this
     let values = e.detail.value
     console.log(values)
     let name = values.name
@@ -205,11 +211,15 @@ Page({
           let errCode = data.errCode;
           switch (errCode) {
             case '0':
-              wx.showModal({
-                title: '提示',
-                content: '与你重名的有'+ data.resultData  + '人',
-                showCancel: false,
-              })
+            _this.setData({
+              cmNum: data.resultData,
+              showTip: true
+            })
+              // wx.showModal({
+              //   title: '提示',
+              //   content: '与你重名的有'+ data.resultData  + '人',
+              //   showCancel: false,
+              // })
               break;
             case '1':
             case '10':

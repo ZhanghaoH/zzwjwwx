@@ -1,2 +1,30 @@
 <!--pages/res_wf/res_wf.wxml-->
-<text>pages/res_wf/res_wf.wxml</text>
+<view class="container">
+  <block wx:for="{{res_wf}}">
+    <view class="wf-wr">
+      <view class="wf-details">
+        <view>{{item.wfdate}}</view>
+        <view class="detail-item">
+          <image mode="widthFix" src="../../resources/wfsj.png" class="detail-icon"></image>
+          {{item.wftime}}
+        </view>
+        <view class="detail-item">
+          <image mode="widthFix" src="../../resources/wffkje.png" class="detail-icon"></image>
+          {{item.fkje}}
+        </view>
+        <view class="detail-item">
+          <image mode="widthFix" src="../../resources/wfkf.png" class="detail-icon"></image>
+          {{item.wfjfs}}
+        </view>
+      </view>
+      <view class="wf-addr">
+        <view style="font-weight: bold">{{item.wfdz}}</view>
+        <view>{{item.wfxw}}</view>
+      </view>
+      <view class="wf-status">
+        <view class="wf-clbj">{{item.clbj}}</view>
+        <view>{{item.wfxwdm}}</view>
+      </view>
+    </view>
+  </block>
+</view>

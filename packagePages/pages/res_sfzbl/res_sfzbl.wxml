@@ -1,2 +1,10 @@
 <!--pages/res_sfzbl/res_sfzbl.wxml-->
-<text>pages/res_sfzbl/res_sfzbl.wxml</text>
+<view class="res-wr">
+  <view class="res-tit">身份证办理进度</view>
+  <view class="res-no">ID:{{res_sfzbl[0].gmSfhm}}</view>
+  <view class="res-cnt">
+    <block wx:for="{{res_sfzbl}}" >
+      <view class="res-item"> {{item.xtbsMc}} </view>
+    </block>
+  </view>
+</view>

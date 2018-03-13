@@ -62,7 +62,7 @@
   <view class='item-wr'>
     <navigator hover-class='none' url="../../packagePages/pages/jszjf/jszjf" open-type="navigate">
     <image mode='widthFix' class='item-icon' src='../../resources/index_jszjf.png'></image>
-    <view class='item-txt'>驾驶证<view></view>计分查询</view>
+    <view class='item-txt'>驾驶证<view></view>记分查询</view>
     </navigator>
   </view>
   <view class='item-wr'>

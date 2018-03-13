@@ -27,9 +27,23 @@
     <view class="form-stadium">
       <input placeholder="请输入车辆识别代码" name="vin" type="text" maxlength="30" placeholder-class="txt-tip" />
     </view>
+    <view class="tips-wr">
+      <view bindtap="showTip" class="tips-info">
+        <text>车辆识别代码具体位置</text>
+        <image class="icon-tips" mode="widthFix" src="../../resources/tips.png"></image>
+      </view>
+    </view>
     <view>
       <button form-type="submit" class="form-stadium btn-block">立即查询</button>
     </view>
   </form>
 </view>
 <image src="../../resources/cx_bg2.png" class="cx-bg"></image>
+<view class="modal-wr" wx:if="{{showTip}}">
+  <view class="modal-cnt">
+  <view class="tips-img-wr">
+    <image src="../../resources/xsz.gif" mode="widthFix" class="tips-img"></image>
+  </view>
+    <view class="modal-btn" bindtap="showTip">确 定</view>
+  </view>
+</view>

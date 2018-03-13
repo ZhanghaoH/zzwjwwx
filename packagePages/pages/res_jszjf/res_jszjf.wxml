@@ -1,2 +1,32 @@
 <!--pages/res_jszjf/res_jszjf.wxml-->
-<text>pages/res_jszjf/res_jszjf.wxml</text>
+<view class="res-wr">
+    <view class="res-tit">驾驶证记分</view>
+    <view class="res-cnt">
+      <view class="res-row">
+        <view class="res-item">
+          <image class="res-icon" mode='widthFix' src='../../resources/name.png'></image>
+          <text>{{res_jszjf.xm}}</text>
+        </view>
+        <view class="res-item">
+          <image class="res-icon" mode='widthFix' src='../../resources/zjhm.png'></image>
+          <text>{{res_jszjf.sfzmhm}}</text>
+        </view>
+      </view>
+      <view class="res-row">
+        <view class="res-item">
+          <image class="res-icon" mode="widthFix" src="../../resources/dabh.png"></image>
+          <text>{{res_jszjf.dabh}}</text>
+        </view>
+        <view class="res-item">
+          <text class="item-label">准驾车型</text>{{res_jszjf.zjcx}}
+        </view>
+        <view class="res-item">
+          <text class='item-label'>记分</text>{{res_jszjf.ljjf}}
+        </view>
+      </view>
+      <view class="res-row" style="justify-content: flex-start">
+          <image class="res-icon" mode='widthFix' src='../../resources/yxqx.png'></image>
+          <text>有效期限  {{res_jszjf.yxqs}} —— {{res_jszjf.yxqz}}</text>
+      </view>
+    </view>
+  </view>

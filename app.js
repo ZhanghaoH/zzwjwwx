@@ -1,7 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
-    wx.clearStorage()
+    // wx.clearStorage()
     // 获取用户权限
     wx.getSetting({
       success: res => {

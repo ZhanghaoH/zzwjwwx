@@ -26,7 +26,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 7,
 			"list": [
 				{
 					"id": 0,
@@ -47,8 +47,8 @@
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "驾驶证计分查询",
+					"id": 3,
+					"name": "驾驶证记分查询",
 					"pathName": "packagePages/pages/jszjf/jszjf",
 					"query": ""
 				},
@@ -80,6 +80,24 @@
 					"id": -1,
 					"name": "出入境证件结果页",
 					"pathName": "packagePages/pages/res_crjzj/res_crjzj",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "身份证办理进度查询结果",
+					"pathName": "packagePages/pages/res_sfzbl/res_sfzbl",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "机动车违法查询结果",
+					"pathName": "packagePages/pages/res_wf/res_wf",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "出入境证件办理进度查询结果",
+					"pathName": "packagePages/pages/res_crjbl/res_crjbl",
 					"query": ""
 				}
 			]

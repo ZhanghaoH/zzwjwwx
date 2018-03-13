@@ -1,2 +1,11 @@
 <!--pages/res_crjbl/res_crjbl.wxml-->
-<text>pages/res_crjbl/res_crjbl.wxml</text>
+<!-- <block wx:for="{{res_crjbl}}"> -->
+  <view class="res-wr">
+    <view class="res-tit">gangaotai{{item.blzt}}</view>
+    <view class="res-no">ID:{{item.sfzh}}410184199302277612</view>
+    <view class="res-cnt">
+        <view class="res-item"> {{item.bljd}} 长距离中 </view>
+        <view class="res-item"> {{item.blzt}}  受理</view>
+    </view>
+  </view>
+<!-- </block> -->

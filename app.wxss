@@ -80,3 +80,77 @@ image {
 .icon-picker {
   width: 30rpx;
 }
+.res-tit {
+  background-color: #1287e2;
+  height: 64rpx;
+  line-height: 64rpx;
+  color: #fff;
+  padding-left: 30rpx;
+  padding-right: 75rpx;
+  border-top-left-radius: 15rpx;
+  border-bottom-right-radius: 64rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.res-wr {
+  margin-top: 60rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  border-radius: 15rpx;
+  border: 1rpx solid #e5e5e5;
+  box-shadow: 4rpx 4rpx 8rpx #e5e5e5;
+  background-color: #fff;
+  color: #4c4c4c;
+  font-size: 26rpx;
+  position: relative;
+  padding-top: 64rpx;
+}
+.tips-wr {
+  color: #b2b2b2;
+  display: flex; 
+  align-items: center;
+  justify-content: flex-end;
+}
+.icon-tips {
+  width: 30rpx;
+  margin-left: 10rpx;
+  vertical-align: middle;
+}
+.tips-info {
+  display: flex;
+  align-items: center;
+}
+.modal-wr {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, .6);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-cnt {
+  width: 70%;
+  background-color: #fff;
+  border-radius: 15rpx;
+}
+.tips-img-wr {
+  padding: 30rpx;
+}
+.tips-img {
+  width: 100%;
+}
+.modal-btn {
+  background-color: #1287e2;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  height: 90rpx; 
+  line-height: 90rpx; 
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}

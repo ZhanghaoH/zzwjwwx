@@ -1,1 +1,25 @@
 /* pages/res_jszjf/res_jszjf.wxss */
+.res-icon {
+  width: 40rpx;
+  margin-right: 20rpx;
+  flex: none;
+}
+.res-row {
+  display: flex;
+  padding: 0 50rpx;
+  line-height: 1.5;
+  margin-top: 30rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+.res-row:last-child {
+  margin-bottom: 30rpx;
+}
+.res-item {
+  /* min-width: 200rpx; */
+  display: flex;
+  align-items: center;
+}
+.item-label {
+  margin-right: 20rpx;
+}

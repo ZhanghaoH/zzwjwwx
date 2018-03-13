@@ -12,7 +12,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let res_jszjf = wx.getStorageSync('res_jszjf')
+    res_jszjf.yxqs = res_jszjf.yxqs.substr(0, 10)
+    res_jszjf.yxqz = res_jszjf.yxqz.substr(0, 10)
+    this.setData({
+      res_jszjf: res_jszjf
+    })
   },
 
   /**

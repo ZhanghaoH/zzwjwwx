@@ -59,6 +59,7 @@ Page({
       icon: 'carev',
       bgColor: '#fff',
     },
+    showTip: false
   },
 
   /**
@@ -68,7 +69,11 @@ Page({
     console.log(app.globalData.city)
     console.log(app.globalData.cityIndex)
   },
-
+  showTip: function () {
+    this.setData({
+      showTip: !this.data.showTip
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -194,6 +199,13 @@ Page({
           switch (errCode) {
             case 0:
               // TODO: navigate to res page
+              wx.setStorageSync('res_wf', data.resultData)
+              wx.navigateTo({
+                url: '../res_wf/res_wf',
+                success: function (res) { },
+                fail: function (res) { },
+                complete: function (res) { },
+              })
               break;
             case '1':
             case '2':
