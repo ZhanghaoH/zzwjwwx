@@ -1,11 +1,11 @@
 <!--pages/res_crjbl/res_crjbl.wxml-->
-<!-- <block wx:for="{{res_crjbl}}"> -->
+ <!-- <block wx:for="{{res_crjbl}}">  -->
   <view class="res-wr">
-    <view class="res-tit">gangaotai{{item.blzt}}</view>
-    <view class="res-no">ID:{{item.sfzh}}410184199302277612</view>
+    <view class="res-tit">{{item.blzt}}</view>
+    <view class="res-no">ID:{{item.sfzh}}</view>
     <view class="res-cnt">
-        <view class="res-item"> {{item.bljd}} 长距离中 </view>
-        <view class="res-item"> {{item.blzt}}  受理</view>
+        <view class="res-item"> 办理进度： {{item.bljd}} </view>
+        <view class="res-item"> 办理状态： {{item.blzt}} </view>
     </view>
   </view>
-<!-- </block> -->
+ <!-- </block>  -->
