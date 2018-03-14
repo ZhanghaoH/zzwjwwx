@@ -67,14 +67,14 @@ image {
   margin-top: 50rpx;
   line-height: 90rpx;
 }
-.tips-wr {
+.info-wr {
   margin-left: 30rpx;
   margin-right: 30rpx;
   margin-top: 30rpx;
   font-size: 26rpx;
   line-height: 1.5;
 }
-.tips-bd {
+.info-bd {
   color: #808080
 }
 .icon-picker {

@@ -8,9 +8,9 @@
     <button form-type="submit" class="form-stadium btn-block">立即查询</button>
   </view>
 </form>
-<view class="tips-wr">
+<view class="info-wr">
   <view>温馨提示：</view>
-  <view class='tips-bd'>身份证进度查询功能只能查询互联网+便民服务平台用户正在办理的身份证进度信息</view>
+  <view class='info-bd'>身份证进度查询功能只能查询互联网+便民服务平台用户正在办理的身份证进度信息</view>
 </view>
 </view>
 <image src="../../resources/cx_bg2.png" class="cx-bg"></image>

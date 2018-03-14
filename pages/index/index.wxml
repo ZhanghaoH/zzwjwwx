@@ -10,12 +10,10 @@
   </view>
   <!-- 地址浮窗 -->
   <view class='addr-wr' bindtap='isChangeCity'>
-    <view style='font-size: 40rpx'>{{addr}}</view>
+    <view class="city-name">{{addr}} <image mode='widthFix' class='icon-edit' src='../../resources/edit.png'></image></view>
     <view>{{citypinyin}}</view>
   </view>
-  <view wx:if="{{showCityList}}" class='list-inline list-area'>
-    <view wx:for="{{cityList}}" class='list-city-li' bindtap='changeCity' data-index='{{index}}'>{{item}} </view>
-  </view>
+  
   <image mode='widthFix' src='../../resources/cityImgs/{{citybg}}'></image>
 </view>
 <view class='hd'>热门服务</view>
@@ -82,5 +80,10 @@
     <image mode='widthFix' class='item-icon' src='../../resources/index_ncfw.png'></image>
     <view class='item-txt'>挪车服务</view>
     </navigator>
+  </view>
+</view>
+<view class="modal-wr" wx:if="{{showCityList}}" bindtap="hidePop">
+  <view class='list-inline list-area'>
+    <view wx:for="{{cityList}}" class='list-city-li' bindtap='changeCity' data-index='{{index}}'>{{item}} </view>
   </view>
 </view>

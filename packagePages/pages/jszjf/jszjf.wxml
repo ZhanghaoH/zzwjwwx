@@ -7,7 +7,7 @@
     <view class="form-stadium">
       <input placeholder="请输入档案编号" name="cardnum" type="text" maxlength="30" placeholder-class="txt-tip" />
     </view>
-    <view class="tips-wr">
+    <view class="tips-wr info-wr">
       <view bindtap="showTip" class="tips-info">
         <text>驾驶证号和档案编号具体位置</text>
         <image class="icon-tips" mode="widthFix" src="../../resources/tips.png"></image>

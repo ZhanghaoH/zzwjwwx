@@ -3,14 +3,17 @@
 .list-city-li {
   width: 25%;
   box-sizing: border-box;
-  padding: 10rpx 0;
+  /* padding: 10rpx 0; */
   text-align: center;
 }
 .list-area {
   position: absolute;
   left: 0;
+  top: 0;
   background-color: #4cb0ff;
   z-index: 3;
+  height: 400rpx;
+  color: #fff;
 }
 .city-wr {
   width: 100%;
@@ -77,4 +80,15 @@ navigator {
   height: 80rpx;
   text-align: center;
   color: #000;
+}
+.icon-edit {
+  width: 40rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+.city-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
 }

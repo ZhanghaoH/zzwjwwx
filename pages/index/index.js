@@ -40,7 +40,7 @@ Page({
       })
     }).then((coordinate) => {
       wx.request({
-        url: 'http://api.map.baidu.com/geocoder/v2/?location=' + coordinate + '&output=json&pois=0&ak=' + ak,
+        url: 'https://api.map.baidu.com/geocoder/v2/?location=' + coordinate + '&output=json&pois=0&ak=' + ak,
         //  header: {},
         method: 'GET',
         dataType: 'json',
@@ -98,10 +98,14 @@ Page({
   // 呼出城市列表
   isChangeCity: function () {
     this.setData({
-      showCityList: !this.data.showCityList
+      showCityList: true
     })
   },
-
+  hidePop: function(){
+    this.setData({
+      showCityList: false
+    })
+  },
   // 变更城市
   changeCity: function (event) {
     console.log(event)

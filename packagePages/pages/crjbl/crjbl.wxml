@@ -8,11 +8,11 @@
     <button form-type="submit" class="form-stadium btn-block">立即查询</button>
   </view>
 </form>
-<view class="tips-wr">
+<view class="info-wr">
   <view>出入境证件办理进度查询支持的证件有：</view>
-  <view class='tips-bd'>中国公民护照</view>
-  <view class='tips-bd'>往来港澳通行证</view>
-  <view class='tips-bd'>大陆居民往来台湾通行证</view>
+  <view class='info-bd'>中国公民护照</view>
+  <view class='info-bd'>往来港澳通行证</view>
+  <view class='info-bd'>大陆居民往来台湾通行证</view>
 </view>
 </view>
 <image src="../../resources/cx_bg2.png" class="cx-bg"></image>
