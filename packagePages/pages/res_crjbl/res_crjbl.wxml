@@ -1,5 +1,5 @@
 <!--pages/res_crjbl/res_crjbl.wxml-->
- <!-- <block wx:for="{{res_crjbl}}">  -->
+  <block wx:for="{{res_crjbl}}">  
   <view class="res-wr">
     <view class="res-tit">{{item.blzt}}</view>
     <view class="res-no">ID:{{item.sfzh}}</view>
@@ -8,4 +8,4 @@
         <view class="res-item"> 办理状态： {{item.blzt}} </view>
     </view>
   </view>
- <!-- </block>  -->
+  </block>  
