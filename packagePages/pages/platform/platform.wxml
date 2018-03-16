@@ -1,0 +1,3 @@
+<!--pages/platform/platform.wxml-->
+<web-view src="http://wap1.henanga.gov.cn/portal/homepage/index"></web-view>
+

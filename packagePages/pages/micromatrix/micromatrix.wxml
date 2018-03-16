@@ -1,0 +1,12 @@
+<!--pages/micromatrix/micromatrix.wxml-->
+<!-- <view>
+  <navigator url='https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA5NjA1ODE4MA==&scene=123#wechat_redirect'>郑州市公安局</navigator>
+</view>
+<view>
+  <navigator url='http://p1.pstatp.com/large/4110004fab1d098c1e4'>平安郑州</navigator>
+</view>
+<view>
+  <navigator url='http://weibo.com/u/5597853509'>金水路分局</navigator>
+</view> --> 
+<web-view src="http://app2.henanga.gov.cn/News/new/html/news_trix.html">
+</web-view>

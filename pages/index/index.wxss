@@ -1,20 +1,31 @@
 /**index.wxss**/
 
 .list-city-li {
-  width: 25%;
+  width: 20%;
   box-sizing: border-box;
-  /* padding: 10rpx 0; */
   text-align: center;
+  height: 64rpx;
+  line-height: 64rpx;
+  border-radius: 64rpx;
+  border: 1rpx solid #1287e2;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  color: #1287e2;
 }
+
+.list-area .list-city-li:nth-child(4n) {
+  margin-right: 20rpx;
+}
+
 .list-area {
-  position: absolute;
+  background-color: #fff;
+  position: fixed;
   left: 0;
-  top: 0;
-  background-color: #4cb0ff;
+  bottom: 0;
   z-index: 3;
-  height: 400rpx;
-  color: #fff;
+  justify-content: space-around;
 }
+
 .city-wr {
   width: 100%;
   position: relative;
@@ -43,6 +54,7 @@
 .img-weather {
   width: 100rpx;
 }
+
 .hd {
   font-size: 32rpx;
   line-height: 90rpx;
@@ -50,6 +62,7 @@
   padding-left: 30rpx;
   padding-right: 30rpx;
 }
+
 .list-service {
   background-color: #fff;
   display: flex;
@@ -57,7 +70,8 @@
   align-items: center;
   justify-content: flex-start;
 }
-.item-wr{
+
+.item-wr {
   width: 25%;
   padding-top: 20rpx;
   padding-bottom: 20rpx;
@@ -66,29 +80,39 @@
   justify-content: center;
   align-items: center;
 }
+
 navigator {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
+
 .item-icon {
   width: 90rpx;
 }
+
 .item-txt {
   margin-top: 17rpx;
   height: 80rpx;
   text-align: center;
   color: #000;
 }
+
 .icon-edit {
   width: 40rpx;
   vertical-align: middle;
   margin-left: 10rpx;
 }
+
 .city-name {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 40rpx;
+}
+.modal-btn {
+  margin-top: 30rpx;
+  border-radius: 0;
+  width: 100%;
 }

@@ -12,6 +12,9 @@
     {
       "root": "packagePages",
       "pages": [
+        "pages/micromatrix/micromatrix",
+        "pages/appdownload/appdownload",
+        "pages/platform/platform",
         "pages/wfcx/wfcx",
         "pages/crjbl/crjbl",
         "pages/sfzbl/sfzbl",
