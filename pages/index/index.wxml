@@ -63,42 +63,42 @@
     <view class='item-txt'>驾驶证<view></view>记分查询</view>
     </navigator>
   </view>
-  <view class='item-wr'>
+  <!-- <view class='item-wr'>
     <navigator hover-class='none' url="../../packagePages/pages/micromatrix/micromatrix" open-type="navigate">
     <image mode='widthFix' class='item-icon' src='../../resources/index_matrix.png'></image>
     <view class='item-txt'>微矩阵</view>
     </navigator>
-  </view>
-  <view class='item-wr'>
+  </view> -->
+  <!-- <view class='item-wr'>
     <navigator hover-class='none' url="../../packagePages/pages/platform/platform" open-type="navigate">
     <image mode='widthFix' class='item-icon' src='../../resources/index_platform.png'></image>
     <view class='item-txt'>便民平台</view>
     </navigator>
-  </view>
+  </view> -->
   <!-- <view class='item-wr'>
     <navigator hover-class='none' url="../../packagePages/pages/appdownload/appdownload" open-type="navigate">
     <image mode='widthFix' class='item-icon' src='../../resources/index_app.png'></image>
     <view class='item-txt'>河南警民通<view></view>下载</view>
     </navigator>
   </view> -->
-  <!-- <view class='item-wr'>
+   <view class='item-wr'>
     <navigator hover-class='none' url="../../packagePages/pages/pgx/pgx" open-type="navigate">
     <image mode='widthFix' class='item-icon' src='../../resources/index_ccba.png'></image>
     <view class='item-txt'>乘车备案</view>
     </navigator>
-  </view> -->
-  <!-- <view class='item-wr'>
+  </view> 
+   <view class='item-wr'>
     <navigator hover-class='none' url="../../packagePages/pages/pgx/pgx" open-type="navigate">
     <image mode='widthFix' class='item-icon' src='../../resources/index_lkdt.png'></image>
     <view class='item-txt'>路况地图</view>
     </navigator>
-  </view> -->
-  <!-- <view class='item-wr'>
+  </view> 
+   <view class='item-wr'>
     <navigator hover-class='none' url="../../packagePages/pages/pgx/pgx" open-type="navigate">
     <image mode='widthFix' class='item-icon' src='../../resources/index_ncfw.png'></image>
     <view class='item-txt'>挪车服务</view>
     </navigator>
-  </view> -->
+  </view> 
 </view>
 <view class="modal-wr" wx:if="{{showCityList}}">
   <view class='list-inline list-area'>
