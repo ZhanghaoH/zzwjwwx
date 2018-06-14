@@ -68,6 +68,13 @@ Page({
           switch (errCode) {
             case '0':
               // TODO: result
+              wx.setStorageSync('res_crjbl', data.resultData)
+              wx.navigateTo({
+                url: '../res_crjbl/res_crjbl',
+                success: function (res) { },
+                fail: function (res) { },
+                complete: function (res) { },
+              })
               break;
             case '1':
             case '10':
