@@ -1,4 +1,7 @@
 /* pages/res_crjbl/res_crjbl.wxss */
+page{
+  min-height: 0
+}
 .res-no {
   letter-spacing: 0;
   position: absolute;
