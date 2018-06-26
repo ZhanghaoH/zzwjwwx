@@ -27,7 +27,7 @@
     <view class="form-stadium">
       <input placeholder="请输入车辆识别代码" name="vin" type="text" maxlength="30" placeholder-class="txt-tip" />
     </view>
-    <view class="tips-wr">
+    <view class="tips-wr info-wr">
       <view bindtap="showTip" class="tips-info">
         <text>车辆识别代码具体位置</text>
         <image class="icon-tips" mode="widthFix" src="../../resources/tips.png"></image>
