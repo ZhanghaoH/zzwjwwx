@@ -16,6 +16,8 @@ Page({
   },
   onLoad: function () {
     let _this = this
+    // 默认郑州 避免地理位置获取失败后 天气为空
+    _this.setInterface()
     if (!wx.getStorageSync('addr') || !wx.getStorageSync('citybg') || !wx.getStorageSync('weather') || !wx.getStorageSync('temperature') || !wx.getStorageSync('picUrl')) {
       _this.getCity()
     }
@@ -118,7 +120,7 @@ Page({
   },
 
   // 地区改变引起的表现层变化
-  setInterface: function (city) {
+  setInterface: function (city="郑州") {
     let _this = this
     const cityArr = ["郑州", "开封", "洛阳", "平顶山", "安阳", "鹤壁", "新乡", "焦作", "濮阳", "许昌", "漯河", "三门峡", "商丘", "周口", "驻马店", "南阳", "信阳", "济源", "巩义", "兰考县", "汝州", "滑县", "长垣县", "邓州", "永城", "固始县", "鹿邑县", "新蔡县"]
     const cityDataArr = [{ city: "郑州", pinyin: "ZhengZhou" , cityIndex: 0}, { city: "开封", pinyin: "KaiFeng" , cityIndex: 1}, { city: "洛阳", pinyin: "LuoYang" , cityIndex: 2}, { city: "平顶山", pinyin: "PingDingShan" , cityIndex: 3}, { city: "安阳", pinyin: "AnYang" , cityIndex: 4}, { city: "鹤壁", pinyin: "HeBi" , cityIndex: 5}, { city: "新乡", pinyin: "XinXiang" , cityIndex: 6}, { city: "焦作", pinyin: "JiaoZuo" , cityIndex: 7}, { city: "濮阳", pinyin: "PuYang" , cityIndex: 8}, { city: "许昌", pinyin: "XuChang" , cityIndex: 9}, { city: "漯河", pinyin: "LuoHe" , cityIndex: 10}, { city: "三门峡", pinyin: "SanMenXia" , cityIndex: 11}, { city: "商丘", pinyin: "ShangQiu" , cityIndex: 12}, { city: "周口", pinyin: "ZhouKou" , cityIndex: 13}, { city: "驻马店", pinyin: "ZhuMaDian" , cityIndex: 14}, { city: "南阳", pinyin: "NanYang" , cityIndex: 15}, { city: "信阳", pinyin: "XinYang" , cityIndex: 16}, { city: "济源", pinyin: "JiYuan" , cityIndex: 17}, { city: "巩义", pinyin: "GongYi" , cityIndex: 0}, { city: "兰考县", pinyin: "LanKao" , cityIndex: 1}, { city: "汝州", pinyin: "RuZhou" , cityIndex: 3}, { city: "滑县", pinyin: "HuaXian" , cityIndex: 4}, { city: "长垣县", pinyin: "ChangYuan" , cityIndex: 6}, { city: "邓州", pinyin: "DengZhou" , cityIndex: 15}, { city: "永城", pinyin: "YongCheng" , cityIndex: 12}, { city: "固始县", pinyin: "GuShi" , cityIndex: 17}, { city: "鹿邑县", pinyin: "LuYi" , cityIndex: 13}, { city: "新蔡县", pinyin: "XinCai", cityIndex: 15}]
